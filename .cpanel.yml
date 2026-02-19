@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/compvge/hub.compv2.ge/
+    - /bin/cp -R * $DEPLOYPATH
