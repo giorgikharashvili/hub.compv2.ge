@@ -17,10 +17,10 @@ return array (
     'admin_user_exists' => true,
     'site_info' => 
     array (
-      'name' => 'Compv2',
-      'description' => 'Compv2 just in testing',
-      'keywords' => 'Compv2',
-      'url' => 'https://compv2.ge',
+      'name' => 'hub.compv2',
+      'description' => 'hub.compv2 just in testing',
+      'keywords' => 'hub.compv2',
+      'url' => 'https://hub.compv2.ge',
       'timezone' => 'UTC',
       'footer_description' => '',
     ),
