@@ -1,0 +1,8 @@
+{
+    "name": "ProfilePosts",
+    "version": "1.0.0",
+    "description": "Profile mini-feed module for user posts and updates",
+    "authors": ["Flames"],
+    "providers": ["Flute\\Modules\\ProfilePosts\\Providers\\ProfilePostsProvider"],
+    "dependencies": {}
+}

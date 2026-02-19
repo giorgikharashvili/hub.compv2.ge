@@ -1,0 +1,41 @@
+@import 'components/skin-variables';
+@import 'components/skin-header';
+@import 'components/skin-sidebar';
+@import 'components/skin-weapons';
+@import 'components/modals/search-modal';
+@import 'components/modals/skins-grid-modal';
+@import 'components/modals/agents-modal';
+@import 'components/modals/charms-modal';
+@import 'components/modals/weapon-types-modal';
+@import 'components/modals/skin-settings-modal';
+@import 'components/modals/stickers-charms-sidebar';
+@import 'components/skin-modals-skeleton';
+@import 'components/skin-loadouts';
+@import 'components/skin-item-actions';
+@import 'components/skin-vip';
+
+.skins-container {
+    max-width: var(--skinchanger-container-width);
+    margin: 0 auto;
+    padding: var(--space-lg);
+
+    .skins-content {
+        display: grid;
+        grid-template-columns: var(--skinchanger-sidebar-width) 1fr;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+    }
+}
+
+.coming-soon-notice {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--small);
+    color: var(--text-400);
+    font-style: italic;
+    margin-left: var(--space-md);
+}

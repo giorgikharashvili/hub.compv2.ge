@@ -1,0 +1,394 @@
+#skin-settings-modal {
+    .modal__header, .drag-handle {
+        position: relative;
+        z-index: 2;
+    }
+
+    #skin-settings-modal-content {
+        padding: 0;
+        padding-top: var(--space-md);
+    }
+
+    .skin-settings-modal-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+        padding: var(--space-md);
+        border-top: 1px solid var(--transp-1);
+        background-color: var(--blurred-background);
+
+        >button {
+            width: 100%;
+        }
+    }
+}
+
+.skin-settings-modal-content {
+    display: flex;
+    gap: var(--space-lg);
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 25px 25px 25px;
+
+    @include media(pc) {
+        min-width: 800px;
+    }
+
+    @include media(mobile) {
+        flex-direction: column;
+    }
+
+    .settings-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+
+        .setting-section {
+            grid-column: span 1;
+        }
+    }
+
+    .weapon-preview-section {
+        flex: 0 0 300px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+
+        .weapon-showcase {
+            text-align: center;
+
+            .weapon-image {
+                margin-bottom: var(--space-md);
+
+                img {
+                    width: 100%;
+                    max-width: 300px;
+                    height: 225px;
+                    object-fit: contain;
+                    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+                }
+
+                .rarity-glow {
+                    position: absolute;
+                    inset: 0;
+                    top: -6rem;
+                    max-width: 100%;
+                    background: linear-gradient(to bottom, var(--rarity-color, transparent) 0%, transparent 70%);
+                    opacity: 0;
+                    border-radius: 12px;
+                    z-index: -1;
+                    animation: gradient-appear 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                }
+            }
+        }
+
+        .weapon-attachments {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+
+            .attachment-section {
+                .section-label {
+                    font-size: var(--small);
+                    font-weight: 600;
+                    color: var(--text-500);
+                    margin-bottom: var(--space-xs);
+                    text-transform: uppercase;
+                    letter-spacing: 0.8px;
+                }
+
+                .stickers-preview {
+                    display: flex;
+                    gap: var(--space-xs);
+                    justify-content: flex-start;
+
+                    .sticker-mini {
+                        width: 50px;
+                        height: 50px;
+                        background: var(--transp-1);
+                        border: 1px solid var(--transp-3);
+                        border-radius: 6px;
+                        padding: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        transition: all 0.2s ease;
+                        font-size: var(--h5);
+                        cursor: pointer;
+
+                        &:hover {
+                            background: var(--transp-2);
+                            border-color: var(--transp-5);
+                        }
+
+                        &.has-sticker {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+
+                            .remove-sticker {
+                                @extend .blur-bg;
+                                position: absolute;
+                                top: -6px;
+                                right: -6px;
+                                width: 20px;
+                                height: 20px;
+                                background-color: var(--error);
+                                color: #fff;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 14px;
+                                font-weight: 600;
+                                cursor: pointer;
+                                opacity: 0;
+                                transition: opacity 0.2s ease;
+                            }
+
+                            &:hover .remove-sticker {
+                                opacity: 1;
+                            }
+                        }
+
+                        &.empty-sticker {
+                            .add-icon {
+                                font-size: 14px;
+                                color: var(--text-400);
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                .charm-preview {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    .charm-mini {
+                        width: 60px;
+                        height: 60px;
+                        background: var(--transp-1);
+                        border: 1px solid var(--transp-3);
+                        border-radius: 8px;
+                        padding: 6px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        transition: all 0.2s ease;
+                        font-size: var(--h5);
+                        cursor: pointer;
+
+                        &:hover {
+                            background: var(--transp-2);
+                            border-color: var(--transp-5);
+                        }
+
+                        &.has-charm {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+
+                            .remove-charm {
+                                @extend .blur-bg;
+                                position: absolute;
+                                top: -6px;
+                                right: -6px;
+                                width: 20px;
+                                height: 20px;
+                                background-color: var(--error);
+                                color: #fff;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 14px;
+                                font-weight: 600;
+                                cursor: pointer;
+                                opacity: 0;
+                                transition: opacity 0.2s ease;
+                            }
+
+                            &:hover .remove-charm {
+                                opacity: 1;
+                            }
+                        }
+
+                        &.empty-charm {
+                            .add-icon {
+                                font-size: 18px;
+                                color: var(--text-400);
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .settings-panel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+
+        .setting-section {
+            .section-title {
+                font-size: var(--p);
+                font-weight: 500;
+                color: var(--text-400);
+                margin-bottom: var(--space-xs);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .setting-content {
+                border: 1px solid var(--transp-1);
+                background-color: var(--blurred-background);
+                border-radius: var(--border1);
+                padding: var(--space-md);
+            }
+        }
+    }
+}
+
+.float-control {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    .float-visual-picker {
+        position: relative;
+
+        .float-track {
+            position: relative;
+            height: 8px;
+            background: linear-gradient(to right,
+                    #4CAF50 0%,
+                    #8BC34A 20%,
+                    #FF9800 40%,
+                    #FF5722 70%,
+                    #F44336 100%);
+            border-radius: 4px;
+            margin: var(--space-md) 0;
+            cursor: pointer;
+
+            .float-thumb {
+                position: absolute;
+                top: -6px;
+                width: 20px;
+                height: 20px;
+                background: var(--background);
+                border: 3px solid #ffffff;
+                border-radius: 50%;
+                cursor: grab;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                }
+
+                &:active {
+                    cursor: grabbing;
+                    transform: scale(0.95);
+                }
+
+                &.dragging {
+                    cursor: grabbing;
+                    transform: scale(1.1);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+
+        .float-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: var(--small);
+            color: var(--text-500);
+            margin-top: var(--space-xs);
+
+            .float-label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2px;
+
+                .label-text {
+                    font-weight: 600;
+                    white-space: nowrap;
+                    font-size: 11px;
+                }
+
+                .label-range {
+                    font-size: 9px;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .float-input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-md);
+
+        .float-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .current-quality {
+            padding: var(--space-xs) var(--space-sm);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            font-size: var(--small);
+            font-weight: 500;
+            color: var(--text);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+.skin-settings-footer {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .settings-info {
+        color: var(--text-500);
+        font-size: var(--small);
+        opacity: 0.7;
+    }
+
+    .footer-actions {
+        display: flex;
+        gap: var(--space-sm);
+    }
+}
+
+
+
+// Add skinchanger variables if not defined elsewhere
+:root {
+    --skinchanger-button-radius: 8px;
+    --skinchanger-small-radius: 6px;
+    --skinchanger-transition: all 0.2s ease;
+    --skinchanger-light-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --skinchanger-medium-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

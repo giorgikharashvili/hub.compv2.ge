@@ -1,0 +1,154 @@
+// VIP Related Styles
+.vip-required {
+    opacity: 0.4;
+    filter: grayscale(0.7);
+    position: relative;
+    cursor: not-allowed !important;
+    pointer-events: auto;
+
+    &:hover {
+        opacity: 0.5;
+
+        .vip-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .vip-tooltip {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        border-radius: 6px;
+        z-index: 1000;
+        opacity: 0;
+        transition: all 0.2s ease;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+        width: 100%;
+        height: 100%;
+        white-space: normal;
+        font-size: var(--small);
+        text-align: center;
+        line-height: 1.5;
+        padding: var(--space-xs) var(--space-sm);
+
+        .vip-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            color: #ffd700;
+        }
+    }
+
+    &:hover:not(.has-access) {
+
+        .weapon-actions,
+        .item-actions,
+        .weapon-action-btn,
+        .item-action-btn,
+        .item-actions-menu {
+            display: none !important;
+        }
+    }
+
+    &.weapon-card,
+    &.skin-option,
+    &.weapon-skin-option,
+    &.weapon-type-option,
+    &.special-item-option,
+    &.special-item-card {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+
+        .vip-tooltip {
+            z-index: 2;
+        }
+    }
+
+    &.agent-card {
+        .agent-image {
+            opacity: 0.6;
+        }
+
+        .change-agent-btn {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
+
+.skinchanger-vip-only {
+
+    .weapon-card:not(.has-vip-access),
+    .skin-option:not(.has-vip-access):not(.default-skin),
+    .weapon-skin-option:not(.has-vip-access):not(.default-skin),
+    .weapon-type-option:not(.has-vip-access),
+    .special-item-option:not(.has-vip-access):not(.default-item),
+    .special-item-card:not(.has-vip-access),
+    .agent-card:not(.has-vip-access) {
+        @extend .vip-required;
+    }
+    
+    .skin-option.default-skin,
+    .weapon-skin-option.default-skin,
+    .special-item-option.default-item {
+        opacity: 1;
+        filter: none;
+        cursor: pointer;
+        pointer-events: auto;
+        
+        &:before {
+            display: none;
+        }
+    }
+
+    .vip-restricted {
+        opacity: 0.4;
+        pointer-events: none;
+        position: relative;
+        
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .vip-restricted-clickable {
+        opacity: 0.4;
+        position: relative;
+        
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .default-skin:not(.vip-restricted),
+    .default-item:not(.vip-restricted) {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.vip-restricted:hover .vip-tooltip,
+.vip-restricted-clickable:hover .vip-tooltip {
+    opacity: 1;
+}

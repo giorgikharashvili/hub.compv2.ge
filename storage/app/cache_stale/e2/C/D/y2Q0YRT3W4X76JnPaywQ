@@ -1,0 +1,28 @@
+1771326175
+marketplace_module_ProfilePosts
+a:13:{s:2:"id";s:25:"cmkcznidf000207bcldum7uw2";s:4:"name";s:12:"ProfilePosts";s:4:"slug";s:12:"ProfilePosts";s:11:"description";s:2079:"`ProfilePosts` добавляет в профиль пользователя мини‑ленту с записями и комментариями: можно публиковать апдейты на своей стене или оставлять сообщения другим (если разрешено), а также быстро реагировать эмодзи.
+
+**Возможности:**
+- **Стена в профиле**: публикация записей с поддержкой собственных и гостевых постов.
+- **Гибкие правила доступа**: разрешать/запрещать посты от других и требовать открытый профиль.
+- **Комментарии к записям** с ограничением длины (настраивается).
+- **Реакции эмодзи** к постам и комментариям + лимит реакций на пост.
+- **Прикрепление изображений** (опционально, с лимитом размера).
+- **Уведомления** о новых записях на стене и комментариях.
+- **Антиспам‑лимиты** на посты, комментарии и реакции.
+- **Админ‑панель** для настройки всех параметров модуля.
+
+---
+
+`ProfilePosts` adds a mini‑feed to user profiles with posts and comments: users can publish updates on their own wall or leave messages on others (if allowed), plus react with emojis. 
+
+**Features:**
+- **Profile wall** with support for own posts and guest posts.
+- **Access rules**: allow/disallow posts from others and require open profiles.
+- **Comments on posts** with configurable length limits.
+- **Emoji reactions** for posts and comments + per‑post reaction limits.
+- **Image attachments** (optional, with size cap).
+- **Notifications** for new wall posts and comments.
+- **Rate limits** for posts, comments, and reactions.
+- **Admin settings** to control all module options.
+";s:14:"currentVersion";s:5:"1.0.0";s:13:"downloadCount";i:81;s:6:"isPaid";b:0;s:6:"author";s:9:"flamesina";s:12:"primaryImage";s:73:"/uploads/products/cmkcznidf000207bcldum7uw2/1768332737258-so6bqg6cawr.png";s:6:"images";a:3:{i:0;s:73:"/uploads/products/cmkcznidf000207bcldum7uw2/1768332737258-so6bqg6cawr.png";i:1;s:72:"/uploads/products/cmkcznidf000207bcldum7uw2/1768332738852-mp1uxuk69z.png";i:2;s:72:"/uploads/products/cmkcznidf000207bcldum7uw2/1768332740488-zqbxd16gjo.png";}s:4:"tags";a:0:{}s:9:"languages";a:0:{}s:11:"downloadUrl";s:517:"https://flute-cms.com/api/download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJjbWxtOXNvdHMwMDEwMDdiY3J4eTF6ZnowIiwic2lkIjoiY21sbTl2azZ5MDAxMjA3YmNpYzhkZzBhZSIsInBpZCI6ImNta2N6bmlkZjAwMDIwN2JjbGR1bTd1dzIiLCJ2aWQiOiJjbWtjem5uaTMwMDA2MDdiY3JpY3BibDFtIiwiZmlsZU5hbWUiOiJQcm9maWxlUG9zdHMtMS4wLjAuemlwIiwicGF0aCI6InZlcnNpb25zIiwiZW5jIjpmYWxzZSwiYXVkIjoiZG93bmxvYWQiLCJpc3MiOiJmbHV0ZS1tYXJrZXQtYXBpIiwiaWF0IjoxNzcxMjM5MzQ5LCJuYmYiOjE3NzEyMzkzNDksImV4cCI6MTc3MTIzOTY0OX0.3ohAsiihIG2oBYdGMIKRw5dOyOdzvgeq5eRyzLBt-Lc";}

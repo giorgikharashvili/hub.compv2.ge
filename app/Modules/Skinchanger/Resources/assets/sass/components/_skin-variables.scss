@@ -1,0 +1,156 @@
+:root {
+    // Layout
+    --skinchanger-container-width: 1600px;
+    --skinchanger-sidebar-width: 400px;
+
+    // Border radius
+    --skinchanger-card-radius: 16px;
+    --skinchanger-item-radius: 12px;
+    --skinchanger-button-radius: 10px;
+    --skinchanger-small-radius: 8px;
+    --skinchanger-tiny-radius: 4px;
+    --skinchanger-round-radius: 50%;
+
+    // Spacing (extending existing system)
+    --skinchanger-grid-gap: var(--space-md);
+    --skinchanger-card-padding: var(--space-md);
+    --skinchanger-section-gap: var(--space-xl);
+
+    // Icons
+    --skinchanger-icon-sm: 16px;
+    --skinchanger-icon-md: 20px;
+    --skinchanger-icon-lg: 24px;
+    --skinchanger-icon-xl: 32px;
+
+    // Z-index
+    --skinchanger-dropdown-z: 100;
+    --skinchanger-modal-z: 1000;
+
+    // Team colors
+    --skinchanger-t: #EFAF43;
+    --skinchanger-ct: #25B2E1;
+
+    // Rarity colors
+    --rarity-common: #b0c3d9;
+    --rarity-uncommon: #5e98d9;
+    --rarity-rare: #4b69ff;
+    --rarity-mythical: #8847ff;
+    --rarity-legendary: #d32ce6;
+    --rarity-ancient: #eb4b4b;
+    --rarity-immortal: #e4ae39;
+
+    // Shadows
+    --skinchanger-light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --skinchanger-medium-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --skinchanger-heavy-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+    // Transitions
+    --skinchanger-transition: all var(--transition);
+    --skinchanger-transition-fast: all 0.15s ease;
+    --skinchanger-transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skinchanger-card {
+    background: transparent;
+    border: 1px solid var(--transp-4);
+    border-radius: var(--skinchanger-button-radius);
+    transition: var(--skinchanger-transition);
+    
+    &:hover {
+        border-color: var(--transp-5);
+    }
+    
+    &.selected {
+        border-color: var(--primary);
+        background: var(--primary-50);
+    }
+}
+
+.skinchanger-button {
+    background: transparent;
+    border: 1px solid var(--transp-3);
+    border-radius: var(--skinchanger-button-radius);
+    padding: var(--space-sm) var(--space-md);
+    font-weight: 500;
+    color: var(--text-400);
+    transition: var(--skinchanger-transition);
+    cursor: pointer;
+    
+    &:hover {
+        border-color: var(--text);
+        color: var(--text);
+    }
+    
+    &.primary {
+        background: var(--primary);
+        color: var(--primary-950);
+        border-color: var(--primary);
+        
+        &:hover {
+            background: var(--primary-300);
+        }
+    }
+}
+
+.skinchanger-grid {
+    display: grid;
+    gap: var(--skinchanger-grid-gap);
+    
+    &.weapons {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+    
+    &.skins {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    &.loadouts {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    &.special-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@each $rarity in common, uncommon, rare, mythical, legendary, ancient, immortal {
+    .rarity-#{$rarity} {
+        --rarity-color: var(--rarity-#{$rarity});
+        
+        .rarity-border {
+            background: var(--rarity-color);
+        }
+        
+        .rarity-bg {
+            background: linear-gradient(135deg, color-mix(in srgb, var(--rarity-color) 20%, transparent) 0%, color-mix(in srgb, var(--rarity-color) 10%, transparent) 100%);
+        }
+    }
+}
+
+.team-ct {
+    --team-color: var(--skinchanger-ct);
+}
+
+.team-t {
+    --team-color: var(--skinchanger-t);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

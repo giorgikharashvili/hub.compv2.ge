@@ -1,0 +1,1 @@
+<a href="https://steamcommunity.com/profiles/76561199231759856/" class="badge primary" target="_blank">76561199231759856</a><?php /**PATH /home/compvge/public_html/bootstrap/../storage/app/views/99944421c8e1601a4057a868e6983eb6c7579d66.blade.php ENDPATH**/ ?>

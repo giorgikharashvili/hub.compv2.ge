@@ -1,0 +1,2 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="metric__trend-icon" width="1em" height="1em" role="img" fill="currentColor" path="ph.bold.trend-up-bold" componentName="icon"><rect width="256" height="256" fill="none"></rect><polyline points="232 56 136 152 96 112 24 184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><polyline points="232 120 232 56 168 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline></svg>
+

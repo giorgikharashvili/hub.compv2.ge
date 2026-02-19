@@ -1,0 +1,3 @@
+1771540627
+flute.deferred_listeners
+a:2:{s:14:"flute.response";a:1:{s:59:"Flute\Core\Listeners\UserChangeResponseListener::onResponse";a:2:{s:8:"listener";a:2:{i:0;O:47:"Flute\Core\Listeners\UserChangeResponseListener":0:{}i:1;s:10:"onResponse";}s:8:"priority";i:0;}}s:20:"template.initialized";a:2:{s:62:"Flute\Core\Modules\Payments\Listeners\TemplateListener::handle";a:2:{s:8:"listener";a:2:{i:0;s:54:"Flute\Core\Modules\Payments\Listeners\TemplateListener";i:1;s:6:"handle";}s:8:"priority";i:0;}s:61:"Flute\Core\Modules\Profile\Listeners\TemplateListener::handle";a:2:{s:8:"listener";a:2:{i:0;s:53:"Flute\Core\Modules\Profile\Listeners\TemplateListener";i:1;s:6:"handle";}s:8:"priority";i:0;}}}

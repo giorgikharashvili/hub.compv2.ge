@@ -1,0 +1,3 @@
+1771605693
+admin_dashboard_user_activity
+a:2:{s:6:"series";a:2:{i:0;a:2:{s:4:"name";s:12:"Active Users";s:4:"data";a:7:{i:0;i:0;i:1;i:2;i:2;i:1;i:3;i:1;i:4;i:1;i:5;i:3;i:6;i:1;}}i:1;a:2:{s:4:"name";s:12:"Online Users";s:4:"data";a:7:{i:0;i:0;i:1;i:0;i:2;i:0;i:3;i:0;i:4;i:0;i:5;i:0;i:6;i:1;}}}s:6:"labels";a:7:{i:0;s:3:"Fri";i:1;s:3:"Sat";i:2;s:3:"Sun";i:3;s:3:"Mon";i:4;s:3:"Tue";i:5;s:3:"Wed";i:6;s:3:"Thu";}}

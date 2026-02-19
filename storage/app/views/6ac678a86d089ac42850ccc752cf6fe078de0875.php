@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="icon-eye" width="1em" height="1em" role="img" fill="currentColor" id="password_confirmation" path="ph.regular.eye" componentName="icon"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
+
+<?php /**PATH /home/compvge/public_html/bootstrap/../storage/app/views/2a8c588fd1a0c5178900f9427a6f58b52a790354.blade.php ENDPATH**/ ?>

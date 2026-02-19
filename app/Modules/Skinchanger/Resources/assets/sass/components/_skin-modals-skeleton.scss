@@ -1,0 +1,381 @@
+.skins-modal-skeleton,
+.items-modal-skeleton,
+.weapon-modal-skeleton,
+.skin-settings-modal-skeleton {
+    .search-container {
+        padding: var(--space-md) 0;
+        border-bottom: 1px solid var(--transp-1);
+
+        .search-input-wrapper {
+            display: flex;
+            gap: var(--space-sm);
+            align-items: flex-start;
+
+            .skeleton-search-input {
+                flex: 1;
+                height: 48px;
+                border-radius: var(--skinchanger-button-radius);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+
+            .skeleton-clear-button {
+                width: 48px;
+                height: 48px;
+                border-radius: var(--skinchanger-button-radius);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+        }
+
+        .rarity-filters {
+            margin-top: var(--space-md);
+
+            .rarity-badges {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-xs);
+
+                .skeleton-badge {
+                    width: 80px;
+                    height: 32px;
+                    border-radius: var(--skinchanger-button-radius);
+                    background: var(--transp-1);
+                    animation: skeleton-loading 1.5s ease-in-out infinite;
+                }
+            }
+        }
+    }
+
+    .skins-grid-container,
+    .special-items-grid-container,
+    .weapon-types-grid-container {
+        height: 70vh;
+        overflow-y: auto;
+        padding-top: var(--space-md);
+    }
+
+    .skins-grid-skeleton,
+    .special-items-grid-skeleton,
+    .weapon-types-grid-skeleton {
+        @extend .skinchanger-grid;
+        @extend .skins;
+
+        .skin-option-skeleton,
+        .special-item-option-skeleton,
+        .weapon-type-option-skeleton {
+            @extend .skinchanger-card;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md);
+            height: 170px;
+            border-color: var(--transp-05);
+
+            .skeleton-skin-image,
+            .skeleton-item-image,
+            .skeleton-weapon-image {
+                width: 100%;
+                height: 100px;
+                border-radius: var(--skinchanger-button-radius);
+                margin-bottom: var(--space-sm);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+
+            .skeleton-skin-name,
+            .skeleton-item-name,
+            .skeleton-weapon-name {
+                width: 80%;
+                height: 16px;
+                border-radius: var(--skinchanger-tiny-radius);
+                margin-bottom: var(--space-xs);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+
+            .skeleton-item-badge {
+                width: 60%;
+                height: 20px;
+                border-radius: var(--skinchanger-tiny-radius);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+        }
+    }
+}
+
+.weapon-modal-skeleton {
+    .weapon-types-header {
+        text-align: center;
+        padding: var(--space-lg) 0;
+        border-bottom: 1px solid var(--transp-1);
+
+        .skeleton-title {
+            height: 28px;
+            width: 200px;
+            margin: 0 auto var(--space-sm);
+            border-radius: var(--skinchanger-button-radius);
+            background: var(--transp-1);
+            animation: skeleton-loading 1.5s ease-in-out infinite;
+        }
+
+        .skeleton-description {
+            height: 16px;
+            width: 300px;
+            margin: 0 auto;
+            border-radius: var(--skinchanger-tiny-radius);
+            background: var(--transp-1);
+            animation: skeleton-loading 1.5s ease-in-out infinite;
+        }
+    }
+
+    .weapon-types-grid-container {
+        padding-top: var(--space-lg);
+    }
+
+    .weapon-types-grid-skeleton {
+        @extend .skinchanger-grid;
+        @extend .weapons;
+
+        .weapon-type-option-skeleton {
+            @extend .skinchanger-card;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-lg);
+            height: 140px;
+            border-color: var(--transp-05);
+
+            .skeleton-weapon-image {
+                width: 60px;
+                height: 40px;
+                border-radius: var(--skinchanger-small-radius);
+                margin-bottom: var(--space-md);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+
+            .skeleton-weapon-name {
+                width: 80%;
+                height: 16px;
+                border-radius: var(--skinchanger-tiny-radius);
+                background: var(--transp-1);
+                animation: skeleton-loading 1.5s ease-in-out infinite;
+            }
+        }
+    }
+}
+
+@keyframes skeleton-loading {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes gradient-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+}
+
+.skin-settings-modal-skeleton {
+    .skin-settings-modal-content {
+        display: flex;
+        gap: var(--space-lg);
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        padding: 10px 25px 25px 25px;
+        
+        .weapon-preview-section {
+            flex: 0 0 300px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            
+            .weapon-showcase {
+                text-align: center;
+                
+                .skeleton-weapon-image {
+                    width: 100%;
+                    max-width: 300px;
+                    height: 225px;
+                    margin-bottom: var(--space-md);
+                    border-radius: var(--skinchanger-button-radius);
+                    background: var(--transp-1);
+                    animation: skeleton-loading 1.5s ease-in-out infinite;
+                }
+                
+                .skeleton-rarity-glow {
+                    position: absolute;
+                    inset: 0;
+                    top: -6rem;
+                    max-width: 100%;
+                    background: linear-gradient(to bottom, var(--transp-2) 0%, transparent 70%);
+                    border-radius: 12px;
+                    z-index: -1;
+                    animation: skeleton-loading 1.5s ease-in-out infinite;
+                }
+            }
+            
+            .weapon-attachments {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-md);
+                
+                .attachment-section {
+                    .skeleton-section-label {
+                        width: 80px;
+                        height: 14px;
+                        margin-bottom: var(--space-xs);
+                        border-radius: var(--skinchanger-tiny-radius);
+                        background: var(--transp-1);
+                        animation: skeleton-loading 1.5s ease-in-out infinite;
+                    }
+                    
+                    .stickers-preview {
+                        display: flex;
+                        gap: var(--space-xs);
+                        justify-content: flex-start;
+                        
+                        .skeleton-sticker {
+                            width: 50px;
+                            height: 50px;
+                            background: var(--transp-1);
+                            border-radius: 6px;
+                            animation: skeleton-loading 1.5s ease-in-out infinite;
+                        }
+                    }
+                    
+                    .charm-preview {
+                        display: flex;
+                        justify-content: flex-start;
+                        
+                        .skeleton-charm {
+                            width: 60px;
+                            height: 60px;
+                            background: var(--transp-1);
+                            border-radius: 8px;
+                            animation: skeleton-loading 1.5s ease-in-out infinite;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .settings-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            
+            .setting-section {
+                .skeleton-section-title {
+                    width: 100px;
+                    height: 16px;
+                    margin-bottom: var(--space-xs);
+                    border-radius: var(--skinchanger-tiny-radius);
+                    background: var(--transp-1);
+                    animation: skeleton-loading 1.5s ease-in-out infinite;
+                }
+                
+                .setting-content {
+                    border: 1px solid var(--transp-1);
+                    background-color: var(--blurred-background);
+                    border-radius: var(--border1);
+                    padding: var(--space-md);
+                    
+                    .skeleton-float-track {
+                        height: 8px;
+                        border-radius: 4px;
+                        margin: var(--space-md) 0;
+                        background: var(--transp-1);
+                        animation: skeleton-loading 1.5s ease-in-out infinite;
+                    }
+                    
+                    .skeleton-float-labels {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: var(--space-xs);
+                        
+                        .skeleton-float-label {
+                            width: 40px;
+                            height: 24px;
+                            border-radius: var(--skinchanger-tiny-radius);
+                            background: var(--transp-1);
+                            animation: skeleton-loading 1.5s ease-in-out infinite;
+                        }
+                    }
+                    
+                    .skeleton-float-input {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: var(--space-md);
+                        margin-top: var(--space-md);
+                        
+                        .skeleton-input {
+                            flex: 1;
+                            height: 36px;
+                            border-radius: var(--skinchanger-button-radius);
+                            background: var(--transp-1);
+                            animation: skeleton-loading 1.5s ease-in-out infinite;
+                        }
+                        
+                        .skeleton-quality {
+                            width: 80px;
+                            height: 24px;
+                            border-radius: var(--skinchanger-tiny-radius);
+                            background: var(--transp-1);
+                            animation: skeleton-loading 1.5s ease-in-out infinite;
+                        }
+                    }
+                }
+                
+                .settings-section {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: var(--space-md);
+                    
+                    .skeleton-input {
+                        height: 36px;
+                        border-radius: var(--skinchanger-button-radius);
+                        background: var(--transp-1);
+                        animation: skeleton-loading 1.5s ease-in-out infinite;
+                    }
+                }
+            }
+        }
+    }
+    
+    .skin-settings-modal-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+        padding: var(--space-md);
+        border-top: 1px solid var(--transp-1);
+        
+        .skeleton-button {
+            flex: 1;
+            height: 42px;
+            border-radius: var(--skinchanger-button-radius);
+            background: var(--transp-1);
+            animation: skeleton-loading 1.5s ease-in-out infinite;
+        }
+    }
+}

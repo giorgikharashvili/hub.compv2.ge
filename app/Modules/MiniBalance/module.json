@@ -1,0 +1,8 @@
+{
+    "name": "MiniBalance",
+    "version": "1.0.3",
+    "description": "Create a mini widget for displaying balance",
+    "authors": ["Flames"],
+    "providers": ["Flute\\Modules\\MiniBalance\\Providers\\MiniBalanceProvider"],
+    "dependencies": {}
+}

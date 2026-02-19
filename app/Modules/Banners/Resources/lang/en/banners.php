@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'banner' => 'Banner',
+    'banner_image' => 'Banner image',
+    'no_banners' => 'No banners to display',
+    'widget' => 'Banners',
+    'prev_slide' => 'Previous slide',
+    'next_slide' => 'Next slide',
+    'slide_indicators' => 'Slide indicators',
+    
+    'settings' => [
+        'show_titles' => 'Show titles and descriptions',
+        'autoplay' => 'Enable autoplay',
+        'interval' => 'Autoplay interval',
+        'height_mode' => 'Height mode',
+        'height_auto' => 'Automatic',
+        'height_manual' => 'Manual',
+        'height' => 'Banner height',
+        'manage_banners' => 'Manage banners',
+        'add_banner' => 'Add banner',
+        'image_url' => 'Image URL',
+        'upload_image' => 'Upload image',
+        'or_enter_url' => 'or enter URL',
+        'title' => 'Title',
+        'description' => 'Description',
+        'link_url' => 'Link URL',
+        'target' => 'Open links in',
+        'target_self' => 'Same window',
+        'target_blank' => 'New window',
+        'uploading' => 'Uploading...',
+        'upload_error' => 'Upload error',
+        'invalid_file' => 'Please select a valid image file',
+        'file_too_large' => 'File is too large. Maximum size is 5MB',
+    ],
+]; 

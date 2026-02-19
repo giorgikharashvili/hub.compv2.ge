@@ -1,0 +1,2 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="1em" height="1em" role="img" fill="currentColor" path="ph.regular.hard-drive" componentName="icon"><rect width="256" height="256" fill="none"></rect><rect x="24" y="72" width="208" height="112" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><circle cx="188" cy="128" r="12"></circle></svg>
+

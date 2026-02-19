@@ -1,0 +1,1 @@
+<?php /**PATH /home/compvge/public_html/bootstrap/../app/Core/Modules/Admin/Resources/views/layouts/footer.blade.php ENDPATH**/ ?>

@@ -1,0 +1,50 @@
+.agents-grid {
+    .agent-option {
+        .agent-preview-image {
+            width: 100%;
+            height: 120px;
+            background: var(--transp-1);
+            border-radius: var(--skinchanger-button-radius);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .agent-icon {
+                width: 48px;
+                height: 48px;
+                color: var(--text-400);
+            }
+        }
+
+        .agent-details {
+            text-align: center;
+
+            .agent-name {
+                font-weight: 600;
+                font-size: var(--p);
+                margin-bottom: var(--space-xs);
+                color: var(--text);
+            }
+
+            .agent-side {
+                font-size: var(--small);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                padding: var(--space-xs) var(--space-sm);
+                border-radius: var(--skinchanger-tiny-radius);
+
+                &.counterterrorist {
+                    background: var(--info);
+                    color: var(--background);
+                }
+
+                &.terrorist {
+                    background: var(--error);
+                    color: var(--background);
+                }
+            }
+        }
+    }
+} 

@@ -1,0 +1,570 @@
+.weapons-search-container {
+    margin-bottom: var(--space-lg);
+
+    .search-input-wrapper {
+        position: relative;
+        margin: 0 auto;
+
+        .weapon-search-input {
+            width: 100%;
+            padding-left: var(--space-xl);
+            padding-right: var(--space-xl);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: var(--space-md);
+            top: 50%;
+            transform: translateY(-50%);
+            width: var(--skinchanger-icon-sm);
+            height: var(--skinchanger-icon-sm);
+            color: var(--text-400);
+            pointer-events: none;
+        }
+
+        .clear-search-btn {
+            position: absolute;
+            right: var(--space-md);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: none;
+            color: var(--text-400);
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--skinchanger-transition);
+
+            .icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover {
+                background: var(--transp-1);
+                color: var(--text);
+            }
+        }
+    }
+}
+
+.weapons-grid {
+    @extend .skinchanger-grid;
+    @extend .weapons;
+    gap: var(--space-md);
+    display: flex;
+    flex-direction: column;
+
+    .weapon-category-section {
+        margin-bottom: var(--space-sm);
+        transition: var(--skinchanger-transition);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+
+            .category-title {
+                font-size: var(--h6);
+                font-weight: 600;
+                color: var(--text);
+                margin: 0;
+                white-space: nowrap;
+            }
+
+            .category-divider {
+                flex: 1;
+                height: 1px;
+                background: linear-gradient(to right, var(--transp-3), transparent);
+            }
+        }
+
+        .category-weapons {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+    }
+
+    .weapon-card {
+        @extend .skinchanger-card;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: var(--skinchanger-transition);
+
+        &.hidden {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, var(--rarity-color), transparent);
+            opacity: 0;
+            z-index: -1;
+            transition: var(--skinchanger-transition);
+        }
+
+        .weapon-attachments {
+            position: absolute;
+            bottom: var(--space-sm);
+            left: var(--space-sm);
+            right: var(--space-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .weapon-stickers-preview {
+            display: flex;
+            gap: 2px;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        .weapon-sticker-mini {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            padding: 5px;
+            overflow: hidden;
+            background: var(--transp-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .weapon-sticker-mini img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sticker-placeholder {
+            font-size: 8px;
+            font-weight: bold;
+            color: var(--text-300);
+        }
+
+        .weapon-keychain-preview {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            padding: 5px;
+            overflow: hidden;
+            background: var(--transp-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 0;
+            bottom: 0;
+        }
+
+        .weapon-keychain-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .keychain-placeholder {
+            font-size: 8px;
+            font-weight: bold;
+            color: var(--text-300);
+        }
+
+        .weapon-badges {
+            display: flex;
+            gap: 2px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 2px;
+        }
+
+        .weapon-badge {
+            @extend .badge;
+        }
+
+        .stattrack-badge {
+            color: var(--accent-900);
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 2px 4px;
+            border-radius: 4px;
+            background: var(--accent-50);
+            align-self: flex-end;
+        }
+
+        .pattern-badge {
+            background: #4a90ff;
+            color: white;
+        }
+
+        .float-badge {
+            color: var(--text);
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 2px 4px;
+            border-radius: 4px;
+            background: var(--transp-1);
+            align-self: flex-end;
+        }
+
+        .float-badge.fn {
+            color: #4caf50;
+            background: #4caf5010;
+        }
+
+        .float-badge.mw {
+            color: #8bc34a;
+            background: #8bc34a10;
+        }
+
+        .float-badge.ft {
+            color: #ffc107;
+            background: #ffc10710;
+        }
+
+        .float-badge.ww {
+            color: #ff9800;
+            background: #ff980010;
+        }
+
+        .float-badge.bs {
+            color: #f44336;
+            background: #f4433610;
+        }
+
+        .weapon-content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                transition: opacity var(--transition);
+                backdrop-filter: blur(5px);
+                background-color: var(--transp-1);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .weapon-image {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                transition: var(--skinchanger-transition);
+                width: 100%;
+
+                .weapon-icon {
+                    width: var(--skinchanger-icon-xl);
+                    height: var(--skinchanger-icon-xl);
+                    color: var(--text-400);
+                    transition: var(--skinchanger-transition);
+                }
+
+                .weapon-img {
+                    max-width: 90%;
+                    max-height: 90%;
+                    object-fit: contain;
+                    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+                    transition: var(--skinchanger-transition);
+                }
+
+                .skin-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-size: cover;
+                    background-position: center;
+                    opacity: 0;
+                    transition: opacity var(--transition);
+                }
+            }
+
+            .weapon-info {
+                text-align: center;
+                width: 100%;
+
+                .weapon-name {
+                    font-size: var(--small);
+                    font-weight: 600;
+                    color: var(--text);
+                    margin-bottom: var(--space-2xs);
+                    line-height: 1.3;
+                    text-wrap: balance;
+                    justify-content: center;
+                }
+
+                .skin-name {
+                    font-size: var(--p-small);
+                    color: var(--text-400);
+                    font-weight: 500;
+                    transition: color var(--transition);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 1.4;
+                    margin-bottom: var(--space-2xs);
+                }
+
+                .weapon-nametag {
+                    font-size: var(--p-small);
+                    color: var(--primary);
+                    font-weight: 500;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: var(--space-2xs);
+                    padding: var(--space-2xs) var(--space-xs);
+                    background: var(--primary-50);
+                    border-radius: var(--skinchanger-tiny-radius);
+                    border: 1px solid var(--primary-100);
+                    display: inline-block;
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .add-skin-text {
+                    font-size: var(--p-small);
+                    color: var(--text-400);
+                    font-weight: 500;
+                    font-style: italic;
+                    text-align: center;
+                    text-wrap: balance;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .rarity-badge {
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+            z-index: 2;
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            background: var(--rarity-color);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: var(--skinchanger-transition);
+        }
+
+        .weapon-actions {
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
+            z-index: 2;
+            display: flex;
+            gap: var(--space-xs);
+            opacity: 0;
+            transition: var(--skinchanger-transition);
+
+            .weapon-action-btn {
+                @extend .icon-hover;
+
+                width: 32px;
+                height: 32px;
+                background: var(--transp-1);
+                color: var(--text-200);
+
+                .icon {
+                    width: 14px;
+                    height: 14px;
+                }
+
+                &.settings-btn {
+                    background: var(--transp-2);
+                    border-color: var(--transp-5);
+
+                    &:hover {
+                        background: var(--transp-5);
+                        border-color: var(--transp-2);
+                        color: var(--text);
+                    }
+                }
+
+                &.remove-btn {
+                    background-color: var(--error-light);
+
+                    &:hover {
+                        background: var(--error-light);
+                        border-color: var(--error-light);
+                        color: var(--error);
+                    }
+                }
+            }
+        }
+
+        &.has-skin {
+            border-color: var(--transp-05);
+            padding: var(--space-md);
+            text-align: center;
+
+            &::before {
+                opacity: 0.2;
+            }
+
+            .rarity-badge {
+                opacity: 1;
+            }
+
+            .weapon-image {
+                .weapon-icon {
+                    opacity: 0;
+                }
+
+                .skin-image {
+                    opacity: 1;
+                }
+
+                .weapon-img {
+                    opacity: 0.7;
+                }
+            }
+
+            .weapon-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .skin-name {
+                color: var(--text-300);
+                font-weight: 500;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                background-color: var(--transp-05);
+                border-color: var(--transp-5);
+
+                &::before {
+                    opacity: 0.4;
+                }
+
+                .weapon-actions {
+                    opacity: 1;
+                }
+
+                .weapon-image .weapon-img {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+                    transition: var(--skinchanger-transition);
+                }
+
+                .skin-name {
+                    color: var(--text);
+                }
+            }
+        }
+
+        &:not(.has-skin) {
+            .weapon-content {
+                padding: var(--space-md);
+
+                .weapon-image {
+                    opacity: .5;
+                }
+            }
+
+            .add-skin-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: var(--text);
+                font-size: var(--skinchanger-icon-lg);
+                transition: var(--skinchanger-transition);
+                opacity: 0;
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            &:hover {
+                border-color: var(--transp-5);
+
+                .weapon-content {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                .add-skin-icon {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
+    }
+}
+
+.no-weapons-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--text-400);
+    font-style: italic;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    .icon {
+        width: var(--skinchanger-icon-xl);
+        height: var(--skinchanger-icon-xl);
+        margin-bottom: var(--space-md);
+        color: var(--text-300);
+        fill: var(--text-300);
+    }
+}

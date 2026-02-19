@@ -1,0 +1,3 @@
+1771263145
+monitoring_dashboard_metrics
+a:4:{s:13:"total_servers";a:2:{s:5:"value";i:1;s:4:"diff";i:0;}s:14:"online_servers";a:2:{s:5:"value";i:0;s:4:"diff";i:0;}s:13:"total_players";a:2:{s:5:"value";i:0;s:4:"diff";d:0;}s:12:"servers_fill";a:2:{s:5:"value";s:2:"0%";s:4:"diff";i:0;}}

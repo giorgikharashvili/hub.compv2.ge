@@ -1,0 +1,8 @@
+{
+    "name": "SteamInfo",
+    "version": "1.0.0",
+    "description": "Module for displaying steamid in profile",
+    "authors": ["Flames"],
+    "providers": ["Flute\\Modules\\SteamInfo\\Providers\\SteamInfoProvider"],
+    "dependencies": {}
+}

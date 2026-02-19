@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="me-1" width="1em" height="1em" role="img" fill="currentColor" id="field-add-connection-6b9068fde9765d1ccdd2e99e42faf656bf8bb1bc" path="ph.bold.plus-bold" componentName="icon"><rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+
+<?php /**PATH /home/compvge/public_html/bootstrap/../storage/app/views/1b048fa352a5fb1e91e121e620d0daf80d634672.blade.php ENDPATH**/ ?>

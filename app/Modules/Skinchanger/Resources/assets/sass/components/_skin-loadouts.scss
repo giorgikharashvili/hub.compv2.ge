@@ -1,0 +1,288 @@
+.community-loadouts-grid {
+    @extend .skinchanger-grid;
+    @extend .loadouts;
+
+    .community-loadout-card {
+        @extend .skinchanger-card;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+
+        .loadout-details {
+            padding: var(--space-lg);
+
+            .loadout-header {
+                margin-bottom: var(--space-md);
+
+                .loadout-name {
+                    font-weight: 600;
+                    font-size: var(--p);
+                    margin-bottom: var(--space-xs);
+                    color: var(--text);
+                }
+
+                .loadout-author {
+                    font-size: var(--small);
+                    color: var(--text-400);
+                    margin-bottom: var(--space-xs);
+
+                    &::before {
+                        content: 'by ';
+                        opacity: 0.7;
+                    }
+                }
+
+                .loadout-downloads {
+                    font-size: var(--small);
+                    color: var(--text-400);
+                }
+            }
+
+            .loadout-actions {
+                display: flex;
+                gap: var(--space-sm);
+
+                .preview-loadout-btn {
+                    @extend .skinchanger-button;
+                    flex: 1;
+                    font-size: var(--small);
+                }
+
+                .apply-loadout-btn {
+                    @extend .skinchanger-button;
+                    @extend .primary;
+                    flex: 1;
+                    font-size: var(--small);
+                }
+            }
+        }
+    }
+}
+
+// Sidebar loadouts
+.community-loadouts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    .loadout-item {
+        @extend .skinchanger-card;
+        padding: var(--skinchanger-card-padding);
+        cursor: pointer;
+        position: relative;
+
+        .loadout-name {
+            font-weight: 600;
+            font-size: var(--small);
+            margin-bottom: var(--space-xs);
+            color: var(--text);
+        }
+
+        .loadout-author {
+            font-size: var(--p-small);
+            color: var(--text-400);
+            margin-bottom: var(--space-xs);
+        }
+
+        .loadout-downloads {
+            font-size: var(--p-small);
+            color: var(--text-400);
+        }
+    }
+}
+
+// Loadout dropdown
+.loadout-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--background);
+    border: 1px solid var(--transp-3);
+    border-radius: var(--skinchanger-button-radius);
+    box-shadow: var(--skinchanger-light-shadow);
+    z-index: var(--skinchanger-dropdown-z);
+    max-height: 200px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: var(--skinchanger-transition);
+    animation: slideIn 0.2s ease forwards;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .loadout-option {
+        padding: var(--space-sm) var(--space-md);
+        cursor: pointer;
+        transition: background var(--transition);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            background: var(--transp-1);
+        }
+
+        &.active {
+            background: var(--text);
+            color: var(--background);
+        }
+
+        .loadout-name {
+            font-size: var(--p);
+            font-weight: 500;
+        }
+
+        .loadout-actions {
+            display: flex;
+            gap: var(--space-xs);
+            opacity: 0;
+            transition: opacity var(--transition);
+
+            .edit-loadout,
+            .delete-loadout {
+                background: transparent;
+                border: none;
+                padding: var(--space-2xs);
+                border-radius: var(--skinchanger-tiny-radius);
+                transition: var(--skinchanger-transition);
+
+                .icon {
+                    width: var(--skinchanger-icon-sm);
+                    height: var(--skinchanger-icon-sm);
+                }
+            }
+
+            .edit-loadout:hover {
+                background: var(--info);
+                color: var(--background);
+            }
+
+            .delete-loadout:hover {
+                background: var(--error);
+                color: var(--background);
+            }
+        }
+
+        &:hover .loadout-actions {
+            opacity: 1;
+        }
+    }
+}
+
+// Loadout preview modal content
+.loadout-preview-content {
+    .preview-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-xl);
+
+        .loadout-info {
+            .loadout-name {
+                font-size: var(--h5);
+                font-weight: 600;
+                color: var(--text);
+                margin-bottom: var(--space-xs);
+            }
+
+            .loadout-author {
+                font-size: var(--p);
+                color: var(--text-400);
+            }
+        }
+
+        .team-selector {
+            display: flex;
+            gap: var(--space-sm);
+
+            .team-btn {
+                @extend .skinchanger-button;
+                font-weight: 500;
+
+                &.active {
+                    background: var(--text);
+                    color: var(--background);
+                    border-color: var(--text);
+                }
+            }
+        }
+    }
+
+    .preview-weapons-grid {
+        @extend .skinchanger-grid;
+        @extend .skins;
+        margin-bottom: var(--space-xl);
+
+        .preview-weapon-card {
+            @extend .skinchanger-card;
+            padding: var(--skinchanger-card-padding);
+            text-align: center;
+
+            .weapon-image {
+                height: 60px;
+                background: var(--transp-1);
+                border-radius: var(--skinchanger-small-radius);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: var(--space-sm);
+
+                .weapon-icon {
+                    width: var(--skinchanger-icon-lg);
+                    height: var(--skinchanger-icon-lg);
+                    color: var(--text-400);
+                }
+            }
+
+            .weapon-name {
+                font-size: var(--small);
+                font-weight: 600;
+                color: var(--text);
+                margin-bottom: var(--space-xs);
+            }
+
+            .skin-name {
+                font-size: var(--p-small);
+                color: var(--text-400);
+            }
+
+            &.has-skin {
+                .weapon-image {
+                    background: var(--transp-2);
+                }
+
+                .skin-name {
+                    color: var(--text);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .preview-actions {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+
+        .apply-loadout-btn {
+            @extend .skinchanger-button;
+            @extend .primary;
+            padding: var(--space-md) var(--space-xl);
+            font-weight: 600;
+            font-size: var(--p);
+        }
+
+        .close-preview-btn {
+            @extend .skinchanger-button;
+            padding: var(--space-md) var(--space-xl);
+            font-size: var(--p);
+            font-weight: 500;
+        }
+    }
+}

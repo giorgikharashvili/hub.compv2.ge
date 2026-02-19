@@ -1,0 +1,182 @@
+.skins-teams {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+    padding: var(--space-md) 0;
+    position: relative;
+    flex-wrap: wrap;
+
+    .skins-team-button {
+        @extend .skinchanger-button;
+        min-width: 120px;
+        height: 60px;
+        font-size: var(--h5);
+        font-weight: bold;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-sm);
+        overflow: hidden;
+        padding: var(--space-sm) var(--space-lg);
+
+        &:hover {
+            border-color: var(--transp-5);
+            background-color: var(--transp-1);
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            z-index: -1;
+            opacity: .2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+            transition: var(--skinchanger-transition-slow);
+        }
+
+        &[data-team="ct"] {
+            @extend .team-ct;
+            color: var(--team-color);
+
+            &::after {
+                background: linear-gradient(to right, var(--team-color), transparent);
+            }
+
+            &.active {
+                border-color: var(--team-color);
+            }
+        }
+
+        &[data-team="t"] {
+            @extend .team-t;
+            color: var(--team-color);
+
+            &::after {
+                background: linear-gradient(to right, var(--team-color), transparent);
+            }
+
+            &.active {
+                border-color: var(--team-color);
+            }
+        }
+
+        &.active {
+            &::after {
+                opacity: 0.4;
+                left: 0;
+            }
+        }
+    }
+}
+
+.skins-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-md);
+
+    .skins-loadout-selector {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+
+        &.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+
+            .disabled-notice {
+                font-size: var(--small);
+                color: var(--text-400);
+                font-style: italic;
+                margin-left: var(--space-md);
+            }
+        }
+
+        .loadout-dropdown {
+            position: relative;
+
+            .loadout-button {
+                @extend .skinchanger-button;
+                display: flex;
+                align-items: center;
+                gap: var(--space-sm);
+                min-width: 160px;
+                justify-content: space-between;
+                font-size: var(--p);
+                color: var(--text);
+
+                .icon {
+                    width: var(--skinchanger-icon-md);
+                    height: var(--skinchanger-icon-md);
+                    transition: transform var(--transition);
+                    opacity: 0.6;
+                }
+
+                &.open .icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .loadout-add {
+            @extend .skinchanger-button;
+            @extend .primary;
+
+            height: 40px;
+            width: 40px;
+            border-radius: var(--skinchanger-round-radius);
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--h5);
+        }
+    }
+}
+
+.skins-actions {
+    display: flex;
+    gap: var(--space-sm);
+
+    @include media(pc) {
+        position: absolute;
+        right: 0;
+    }
+
+    .skins-reset-button {
+        @extend .skinchanger-button;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-weight: 400;
+        font-size: var(--p);
+
+        &:hover {
+            border-color: var(--error);
+            color: var(--error);
+        }
+
+        .icon {
+            width: var(--skinchanger-icon-md);
+            height: var(--skinchanger-icon-md);
+        }
+    }
+}

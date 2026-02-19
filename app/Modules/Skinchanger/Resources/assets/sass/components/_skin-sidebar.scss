@@ -1,0 +1,331 @@
+.skins-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--skinchanger-section-gap);
+
+    @include media(pc) {
+        padding-right: var(--space-lg);
+        border-right: 1px solid var(--transp-1);
+        margin-right: var(--space-lg);
+    }
+
+    .sidebar-section {
+        .section-title {
+            font-size: var(--h6);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            color: var(--text);
+        }
+    }
+
+    .special-items-section {
+        .special-items-cards {
+            @extend .skinchanger-grid;
+            @extend .special-items;
+
+            .special-item-card {
+                @extend .skinchanger-card;
+                padding: var(--skinchanger-card-padding);
+                cursor: pointer;
+                text-align: center;
+                min-height: 160px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow: hidden;
+                position: relative;
+
+                &:hover {
+                    .item-remove-btn,
+                    .item-actions {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                &.has-image {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to top, #eb4b4b3a, transparent);
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        background-color: var(--transp-05);
+                    }
+                }
+
+                .item-icon {
+                    margin-bottom: var(--space-sm);
+
+                    .icon {
+                        width: var(--skinchanger-icon-lg);
+                        height: var(--skinchanger-icon-lg);
+                        color: var(--text-400);
+                    }
+
+                    .item-image {
+                        height: 80px;
+                        width: 80px;
+                        margin: 0 auto;
+                        object-fit: contain;
+                        color: var(--text-400);
+                    }
+                }
+
+                .item-actions {
+                    display: flex;
+                    gap: var(--space-xs);
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: var(--space-sm);
+                    right: var(--space-sm);
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+
+                    .item-action-btn {
+                        @extend .icon-hover;
+
+                        width: 32px;
+                        height: 32px;
+                        background: var(--transp-1);
+                        color: var(--text-200);
+
+                        .icon {
+                            width: 14px;
+                            height: 14px;
+                        }
+
+                        &.settings-btn {
+                            background: var(--transp-2);
+                            border-color: var(--transp-5);
+
+                            &:hover {
+                                background: var(--transp-5);
+                                border-color: var(--transp-2);
+                                color: var(--text);
+                            }
+                        }
+
+                        &.remove-btn {
+                            background-color: var(--error-light);
+
+                            &:hover {
+                                background: var(--error-light);
+                                border-color: var(--error-light);
+                                color: var(--error);
+                            }
+                        }
+                    }
+                }
+
+                .item-remove-btn {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background: var(--transp-2);
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 35px;
+                    font-size: var(--p);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--text-400);
+                    cursor: pointer;
+                    z-index: 1;
+                    transition: all 0.3s ease;
+                    opacity: 0;
+
+                    &:hover {
+                        background: var(--primary);
+                        color: var(--primary-950);
+                    }
+                }
+
+                .item-name {
+                    font-size: var(--small);
+                    font-weight: 500;
+                    color: var(--text);
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                }
+            }
+        }
+    }
+
+    .agent-section {
+        .agent-container {
+            .agent-card {
+                cursor: pointer;
+                display: flex;
+                gap: var(--space-sm);
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+
+                &:hover {
+                    .agent-background-map {
+                        &::after {
+                            background: rgba(0, 0, 0, 0.7);
+                        }
+                    }
+                }
+
+                .agent-background-map {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 300px;
+                    border-radius: var(--skinchanger-button-radius);
+                    overflow: hidden;
+                    z-index: -1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.75);
+                        transition: background 0.3s ease;
+                    }
+
+                    .agent-background-img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: var(--skinchanger-button-radius);
+                    }
+                }
+
+                .agent-image {
+                    width: 100%;
+                    height: 300px;
+                    border-radius: var(--skinchanger-button-radius);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: inherit;
+                        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, transparent);
+                        z-index: 2;
+                    }
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        max-height: 240px;
+                        object-fit: cover;
+                        border-radius: var(--skinchanger-button-radius);
+                        position: absolute;
+                        bottom: 0;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .agent-icon {
+                        width: 28px;
+                        height: 28px;
+                        color: var(--text-400);
+                    }
+                }
+
+                .agent-details {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--space-md);
+                    justify-content: space-between;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+
+                    .agent-name {
+                        font-weight: 600;
+                        font-size: var(--p);
+                        padding: 0 var(--space-sm);
+                        color: #fff;
+                        position: absolute;
+                        bottom: 5rem;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        z-index: 3;
+                    }
+
+                    .change-agent-btn {
+                        @extend .skinchanger-button;
+                        padding: var(--space-xs) var(--space-sm);
+                        font-size: var(--small);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .community-section {
+        .community-loadouts {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+
+            .loadout-item {
+                @extend .skinchanger-card;
+                padding: var(--skinchanger-card-padding);
+                cursor: pointer;
+
+                .loadout-name {
+                    font-weight: 600;
+                    font-size: var(--small);
+                    margin-bottom: var(--space-xs);
+                    color: var(--text);
+                }
+
+                .loadout-author {
+                    font-size: var(--p-small);
+                    color: var(--text-400);
+                    margin-bottom: var(--space-xs);
+                }
+
+                .loadout-downloads {
+                    font-size: var(--p-small);
+                    color: var(--text-400);
+                }
+            }
+        }
+
+        .view-more-button {
+            @extend .skinchanger-button;
+            width: 100%;
+            font-size: var(--small);
+            margin-top: var(--space-md);
+            font-weight: 500;
+        }
+    }
+}

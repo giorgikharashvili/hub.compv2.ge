@@ -1,0 +1,9 @@
+1771326175
+marketplace_module_steamprofile
+a:13:{s:2:"id";s:25:"cmbdv74yw006zw4jzlczohx95";s:4:"name";s:12:"SteamProfile";s:4:"slug";s:12:"steamprofile";s:11:"description";s:598:"**Экспериментально, может сломать некоторые элементы системы!**
+
+Модуль, который будет создавать "временных" пользователей на основе их Steam ID, чтобы видеть весь профиль человека, который не зарегистрирован во Flute.
+
+**Experimental, may break some elements of the system!**
+
+Module that will create "temporary" users based on their Steam ID, so you can see the entire profile of a person who is not registered in Flute.о Flute.";s:14:"currentVersion";s:5:"1.0.0";s:13:"downloadCount";i:254;s:6:"isPaid";b:0;s:6:"author";s:9:"flamesina";s:12:"primaryImage";s:56:"/uploads/images/dbec9d9a-2905-49ca-ab36-f06b3c906f0d.png";s:6:"images";a:1:{i:0;s:56:"/uploads/images/dbec9d9a-2905-49ca-ab36-f06b3c906f0d.png";}s:4:"tags";a:0:{}s:9:"languages";a:0:{}s:11:"downloadUrl";s:517:"https://flute-cms.com/api/download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJjbWxtOXNvdHMwMDEwMDdiY3J4eTF6ZnowIiwic2lkIjoiY21sbTl2azZ5MDAxMjA3YmNpYzhkZzBhZSIsInBpZCI6ImNtYmR2NzR5dzAwNnp3NGp6bGN6b2h4OTUiLCJ2aWQiOiJjbWJkdjc1NXYwMDc5dzRqejZrNHNiOHRkIiwiZmlsZU5hbWUiOiJzdGVhbXByb2ZpbGUtMS4wLjAuemlwIiwicGF0aCI6InZlcnNpb25zIiwiZW5jIjpmYWxzZSwiYXVkIjoiZG93bmxvYWQiLCJpc3MiOiJmbHV0ZS1tYXJrZXQtYXBpIiwiaWF0IjoxNzcxMjM5NjczLCJuYmYiOjE3NzEyMzk2NzMsImV4cCI6MTc3MTIzOTk3M30.Cnie1uDV3eCGcVM9nNd3e3QthwU57ZSz8ArLmFKEkks";}

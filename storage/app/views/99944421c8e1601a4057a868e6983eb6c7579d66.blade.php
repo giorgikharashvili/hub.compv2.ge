@@ -1,0 +1,1 @@
+<a href="https://steamcommunity.com/profiles/76561199231759856/" class="badge primary" target="_blank">76561199231759856</a>

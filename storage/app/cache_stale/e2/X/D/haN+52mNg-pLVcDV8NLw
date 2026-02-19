@@ -1,0 +1,35 @@
+1771194727
+marketplace_module_skinchanger
+a:13:{s:2:"id";s:25:"cmbkwyszs0001w4uj8q4g8r6p";s:4:"name";s:11:"Skinchanger";s:4:"slug";s:11:"skinchanger";s:11:"description";s:1846:"Модуль для изменения скинов прямо на сайте. Поддерживается **Pisex Skinchanger и Weapon Paints**.
+
+**Преимущества:**
+- Имеет уникальный дизайн
+- Быстрая работа за счет внутренней оптимизации
+- Поддержка выбора оружий на несколько команд (Т / КТ)
+- Возможность выбора оружия сразу на несколько команд
+- Возможность сброса & копирования оружий на противоположную команду
+- Выбор агента / скинов / перчаток / ножей / муз.наборов / монет
+- Настройка брелка, стикеров, nametag, stattrack и паттерна у оружия
+
+**В будущем:**
+- Поддержка коллекций оружий
+- Просмотр и копирование чужих коллекций пользователей
+- Общая база всех коллекций скинов и их настроек
+- 3д просмотр оружий
+
+Module for changing skins directly on the site. Supported **Pisex Skinchanger and Weapon Paints**.
+
+**Capabilities:**
+- Has a unique design
+- Fast work due to internal optimization
+- Support for selecting weapons for multiple teams (T / CT)
+- Ability to select weapons for multiple teams at once
+- Ability to reset & copy weapons to the opposite team
+- Selection of agents / skins / gloves / knives / music sets / coins
+- Configuration of the belt, stickers, nametag, stattrack and pattern of the weapon
+
+**In the future:**
+- Support for weapon collections
+- Viewing and copying other users' collections
+- A common database of all skin collections and their settings
+- 3d view of weapons";s:14:"currentVersion";s:5:"1.3.4";s:13:"downloadCount";i:358;s:6:"isPaid";b:1;s:6:"author";s:9:"flamesina";s:12:"primaryImage";s:56:"/uploads/images/1090edfc-7686-4e28-a6af-e00c11838c6a.png";s:6:"images";a:6:{i:0;s:56:"/uploads/images/1090edfc-7686-4e28-a6af-e00c11838c6a.png";i:1;s:56:"/uploads/images/10220f9f-a91b-42ad-8f04-11d65480a519.png";i:2;s:56:"/uploads/images/12616e64-24c4-46f2-803f-2e4cc3d39f17.png";i:3;s:56:"/uploads/images/92801172-ead9-4f76-a7ab-972d76e341e5.png";i:4;s:56:"/uploads/images/534037f5-b70a-465c-a6f8-9aadfef9500e.png";i:5;s:56:"/uploads/images/97b7ee92-9030-4447-8358-c867d052c26c.png";}s:4:"tags";a:0:{}s:9:"languages";a:0:{}s:11:"downloadUrl";s:530:"https://flute-cms.com/api/download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJjbWxtOXNvdHMwMDEwMDdiY3J4eTF6ZnowIiwic2lkIjoiY21sbTl2azZ5MDAxMjA3YmNpYzhkZzBhZSIsInBpZCI6ImNtYmt3eXN6czAwMDF3NHVqOHE0ZzhyNnAiLCJ2aWQiOiJjbWhya3k5emYwNGR4dzRhMHRhMm9xMW5rIiwiZmlsZU5hbWUiOiJza2luY2hhbmdlci0xLjMuNC56aXAiLCJwYXRoIjoiZW5jcnlwdGVkIiwiZW5jIjp0cnVlLCJwaHAiOiI4MiIsImF1ZCI6ImRvd25sb2FkIiwiaXNzIjoiZmx1dGUtbWFya2V0LWFwaSIsImlhdCI6MTc3MTEwODMyNywibmJmIjoxNzcxMTA4MzI3LCJleHAiOjE3NzExMDg2Mjd9.k0-8LBPgsiPS5q3EET8nvhjLxb_xnrcXyaPh1EGl_2Q";}

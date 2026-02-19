@@ -1,0 +1,25 @@
+1771326175
+marketplace_module_Search
+a:13:{s:2:"id";s:25:"cmj355gdn004c07o83e5upcrk";s:4:"name";s:6:"Search";s:4:"slug";s:6:"Search";s:11:"description";s:2563:"`Search` добавляет на сайт быстрый, расширяемый глобальный поиск с красивым модальным интерфейсом и интеграцией в навбар. Модули могут подключать свои источники (пользователи, страницы, навигация, новости, вики и т.п.), а администратор - управлять темами поиска и лимитами, сохраняя безопасность и корректность прав доступа.
+
+**Возможности:**
+
+- **Расширяемая архитектура**: модули добавляют свои источники поиска через провайдеры.
+- **Настройки в админке**: включить/выключить поиск, задать min length и лимит результатов, управлять источниками.
+- **Безопасный API**: фильтрация входных данных, ограничение параметров, защита от падения отдельных провайдеров.
+- **Проверка прав**: страницы с ограничениями не попадают в результаты для пользователя без доступа.
+- **Быстрый UX**: debounce + отмена предыдущих запросов, клавиатурная навигация, фильтры по источникам.
+- **Мобильная адаптация**: удобное закрытие, прокрутка фильтров, аккуратный лоадер и состояния ошибок.
+
+---
+
+`Search` adds a fast, extensible global search with a premium modal UI and navbar integration. Modules can plug in their own search sources (users, pages, navigation, news, wiki, etc.), while admins can control topics and limits — with security and permission-aware results.
+
+**Features:**
+
+- **Extensible architecture**: modules register search providers as new sources.
+- **Admin settings**: enable/disable search, configure min length and result limits, toggle providers.
+- **Secure API**: input sanitization, strict parameter bounds, provider failure isolation.
+- **Permission-aware results**: restricted pages are hidden for users without access.
+- **Fast UX**: debounce + request cancellation, keyboard navigation, provider filters.
+- **Mobile-friendly UI**: clear close actions, scrollable filters, polished loader and error states.";s:14:"currentVersion";s:5:"1.0.1";s:13:"downloadCount";i:103;s:6:"isPaid";b:0;s:6:"author";s:9:"flamesina";s:12:"primaryImage";s:73:"/uploads/products/cmj355gdn004c07o83e5upcrk/1765560528553-8hift7to6ed.png";s:6:"images";a:3:{i:0;s:73:"/uploads/products/cmj355gdn004c07o83e5upcrk/1765560528553-8hift7to6ed.png";i:1;s:73:"/uploads/products/cmj355gdn004c07o83e5upcrk/1765560530574-e4q3ed6nuhv.png";i:2;s:73:"/uploads/products/cmj355gdn004c07o83e5upcrk/1765560533098-venavqd5vp9.png";}s:4:"tags";a:0:{}s:9:"languages";a:0:{}s:11:"downloadUrl";s:509:"https://flute-cms.com/api/download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJjbWxtOXNvdHMwMDEwMDdiY3J4eTF6ZnowIiwic2lkIjoiY21sbTl2azZ5MDAxMjA3YmNpYzhkZzBhZSIsInBpZCI6ImNtajM1NWdkbjAwNGMwN284M2U1dXBjcmsiLCJ2aWQiOiJjbWozY2VlNnQwMDAwMDdvM3o4a2VoMHV2IiwiZmlsZU5hbWUiOiJTZWFyY2gtMS4wLjEuemlwIiwicGF0aCI6InZlcnNpb25zIiwiZW5jIjpmYWxzZSwiYXVkIjoiZG93bmxvYWQiLCJpc3MiOiJmbHV0ZS1tYXJrZXQtYXBpIiwiaWF0IjoxNzcxMjM5NzI5LCJuYmYiOjE3NzEyMzk3MjksImV4cCI6MTc3MTI0MDAyOX0.xfWJ-E-yW6NNM7ajQEbVZ2-IRRT8ft59MpkxnssBuIQ";}

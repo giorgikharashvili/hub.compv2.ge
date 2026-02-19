@@ -1,0 +1,8 @@
+{
+    "name": "SteamEnter",
+    "version": "1.0.1",
+    "description": "Module for manual input of SteamID",
+    "authors": ["Flames"],
+    "providers": ["Flute\\Modules\\SteamEnter\\Providers\\SteamEnterProvider"],
+    "dependencies": {}
+}

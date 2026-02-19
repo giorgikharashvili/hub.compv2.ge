@@ -1,0 +1,73 @@
+$module-prefix: 'steam-info';
+
+.#{$module-prefix} {
+    margin: 0.5rem 0;
+    font-size: var(--p-small);
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    @include media(mobile) {
+        display: none;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 0.25rem;
+        border-radius: var(--border05);
+        background-color: var(--background-900);
+        transition: all var(--transition);
+        border: 1px solid var(--transp-1);
+    }
+
+    &-label {
+        font-size: var(--small);
+        color: var(--text-400);
+    }
+
+    &-value {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-text {
+        font-size: var(--p-small);
+        color: var(--text-200);
+        user-select: all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+    }
+
+    &-copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-500);
+        transition: all var(--transition);
+        padding: 0.15rem;
+        margin-left: 0.25rem;
+        border-radius: var(--border05);
+        flex-shrink: 0;
+
+        &:hover {
+            color: var(--accent);
+            background-color: var(--background-800);
+        }
+
+        svg {
+            width: 0.85rem;
+            height: 0.85rem;
+        }
+    }
+}

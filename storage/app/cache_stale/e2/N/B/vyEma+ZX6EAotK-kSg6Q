@@ -1,0 +1,23 @@
+1771326175
+marketplace_module_l
+a:13:{s:2:"id";s:25:"cmka112uo000106bca6y1xhx9";s:4:"name";s:8:"Lightbox";s:4:"slug";s:1:"l";s:11:"description";s:1665:"Lightbox добавляет на сайт удобный просмотр изображений на весь экран: клик по картинке открывает галерею с увеличением и навигацией. Отлично подходит для постов, гайдов и виджетов, где изображения нужно рассматривать детально.
+
+**Возможности:**
+- **Автоподключение** к изображениям внутри `.md-content` (посты и виджеты).
+- **Галерея внутри блока**: перелистывание назад/вперёд + счётчик.
+- **Зум** колёсиком, клавишами `+/-/0` и двойным кликом.
+- **Панорамирование** при увеличении (drag мышью/тачем).
+- **Клавиатурное управление**: `Esc` закрыть, `←/→` навигация.
+- **Не мешает ссылкам**: картинки, обёрнутые в `<a>`, пропускаются.
+
+---
+
+`Lightbox` adds a clean full-screen image viewer: click any image to open a zoomable gallery with navigation. Great for posts, guides, and widgets where images should be inspected in detail.
+
+**Features:**
+- **Auto-attaches** to images inside `.md-content` (posts and widgets).
+- **Per-block gallery** with prev/next controls and a counter.
+- **Zoom controls** via mouse wheel, `+/-/0` keys, and double click.
+- **Pan when zoomed** (mouse/touch drag).
+- **Keyboard control**: `Esc` to close, `←/→` to navigate.
+- **Link-safe**: skips images already wrapped in anchors.";s:14:"currentVersion";s:5:"1.0.0";s:13:"downloadCount";i:52;s:6:"isPaid";b:0;s:6:"author";s:9:"flamesina";s:12:"primaryImage";s:72:"/uploads/products/cmka112uo000106bca6y1xhx9/1768153651981-tqc6j9p0cb.png";s:6:"images";a:1:{i:0;s:72:"/uploads/products/cmka112uo000106bca6y1xhx9/1768153651981-tqc6j9p0cb.png";}s:4:"tags";a:0:{}s:9:"languages";a:0:{}s:11:"downloadUrl";s:502:"https://flute-cms.com/api/download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJjbWxtOXNvdHMwMDEwMDdiY3J4eTF6ZnowIiwic2lkIjoiY21sbTl2azZ5MDAxMjA3YmNpYzhkZzBhZSIsInBpZCI6ImNta2ExMTJ1bzAwMDEwNmJjYTZ5MXhoeDkiLCJ2aWQiOiJjbWthMTE2eTgwMDAzMDZiY2R3cWV1MGw1IiwiZmlsZU5hbWUiOiJsLTEuMC4wLnppcCIsInBhdGgiOiJ2ZXJzaW9ucyIsImVuYyI6ZmFsc2UsImF1ZCI6ImRvd25sb2FkIiwiaXNzIjoiZmx1dGUtbWFya2V0LWFwaSIsImlhdCI6MTc3MTIzOTM1MiwibmJmIjoxNzcxMjM5MzUyLCJleHAiOjE3NzEyMzk2NTJ9.Pykn3alNl8n0DGOorLAN4ReX7_tSfI3wC0bvJOU1p5w";}

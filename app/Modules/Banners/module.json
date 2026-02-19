@@ -1,0 +1,8 @@
+{
+    "name": "Banners",
+    "version": "1.0.4",
+    "description": "Module for displaying banners and images with links",
+    "authors": ["Flames"],
+    "providers": ["Flute\\Modules\\Banners\\Providers\\BannersProvider"],
+    "dependencies": {}
+}

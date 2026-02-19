@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="icon" width="1em" height="1em" role="img" fill="currentColor" path="ph.regular.dots-three-vertical" componentName="icon"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="12"></circle><circle cx="128" cy="60" r="12"></circle><circle cx="128" cy="196" r="12"></circle></svg>
+
+<?php /**PATH /home/compvge/public_html/bootstrap/../storage/app/views/136e1ac67261f50be39a3e29363ae30c5287c32f.blade.php ENDPATH**/ ?>

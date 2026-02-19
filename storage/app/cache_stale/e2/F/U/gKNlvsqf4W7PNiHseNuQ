@@ -1,0 +1,3 @@
+1771263145
+monitoring_all_servers_week
+a:2:{s:6:"labels";a:7:{i:0;s:6:"09 Feb";i:1;s:6:"10 Feb";i:2;s:6:"11 Feb";i:3;s:6:"12 Feb";i:4;s:6:"13 Feb";i:5;s:6:"14 Feb";i:6;s:6:"15 Feb";}s:6:"series";a:1:{i:0;a:2:{s:4:"name";s:3:"cs2";s:4:"data";a:7:{i:0;i:0;i:1;i:0;i:2;i:0;i:3;i:0;i:4;i:0;i:5;i:0;i:6;i:0;}}}}

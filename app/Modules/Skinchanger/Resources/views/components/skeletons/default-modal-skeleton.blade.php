@@ -1,0 +1,20 @@
+<div class="items-modal-skeleton">
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <div class="skeleton skeleton-search-input"></div>
+            <div class="skeleton skeleton-clear-button"></div>
+        </div>
+    </div>
+
+    <div class="special-items-grid-container">
+        <div class="special-items-grid-skeleton">
+            @for ($i = 0; $i < 24; $i++)
+                <div class="special-item-option-skeleton">
+                    <div class="skeleton skeleton-item-image"></div>
+                    <div class="skeleton skeleton-item-name"></div>
+                    <div class="skeleton skeleton-item-badge"></div>
+                </div>
+            @endfor
+        </div>
+    </div>
+</div>
