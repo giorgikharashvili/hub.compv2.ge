@@ -1,11 +1,38 @@
 .skins-teams {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: var(--space-sm);
     margin-bottom: var(--space-md);
     padding: var(--space-md) 0;
     position: relative;
     flex-wrap: wrap;
+
+    .skins-packages-button {
+        @extend .skinchanger-button;
+        min-width: 120px;
+        height: 60px;
+        font-size: var(--h5);
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-lg);
+        color: var(--accent);
+        cursor: default;
+
+        .skins-packages-icon {
+            width: 24px;
+            height: 24px;
+            opacity: 0.9;
+        }
+
+        &:hover {
+            border-color: var(--accent-300);
+            background-color: var(--transp-1);
+        }
+    }
 
     .skins-team-button {
         @extend .skinchanger-button;

@@ -31,6 +31,12 @@
         </div>
 
         <div class="skins-teams">
+            {{-- Packages square: in future hide via @if when user has no packages --}}
+            <div class="skins-packages-button" data-tooltip="{{ __('skinchanger.packages.title', 'Packages') }}">
+                <x-icon path="ph.regular.package" class="skins-packages-icon" />
+                <span>{{ __('skinchanger.packages.title', 'Packages') }}</span>
+            </div>
+
             <button class="skins-team-button {{ request()->input('team', 'ct') === 'ct' ? 'active' : '' }}"
                 hx-get="{{ route('skinchanger.index') }}?team=ct&server_id={{ $selectedServerId }}" hx-target=".skins-content"
                 hx-swap="outerHTML" hx-push-url="true" data-handler="team-button" data-team="ct">

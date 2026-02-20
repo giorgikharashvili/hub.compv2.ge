@@ -5,6 +5,7 @@ return array (
   'available' => 
   array (
     0 => 'en',
+    1 => 'ka',
   ),
   'all' => 
   array (
