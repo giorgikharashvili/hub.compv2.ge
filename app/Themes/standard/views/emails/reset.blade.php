@@ -14,7 +14,7 @@
                     style="max-width:700px; margin:0 auto;">
                     <tr>
                         <td style="padding:20px; text-align:center;">
-                            <h1 style="color:#a0da59; margin:10px; line-height:1;">@t('auth.reset.subject')</h1>
+                            <h1 style="color:#9667FD; margin:10px; line-height:1;">@t('auth.reset.subject')</h1>
                         </td>
                     </tr>
                     <tr>
@@ -24,9 +24,9 @@
                             <table align="center" cellpadding="0" cellspacing="0" border="0"
                                 style="margin:20px auto;">
                                 <tr>
-                                    <td style="background-color:#BAFF68; border-radius:5px; text-align:center;">
+                                    <td style="background-color:#9667FD; border-radius:5px; text-align:center;">
                                         <a href="{{ $url }}"
-                                            style="display:block; padding:12px 24px; color:#000000; text-decoration:none; font-weight:500; font-size:14px;">@t('auth.reset.subject')</a>
+                                            style="display:block; padding:12px 24px; color:#ffffff; text-decoration:none; font-weight:500; font-size:14px;">@t('auth.reset.subject')</a>
                                     </td>
                                 </tr>
                             </table>

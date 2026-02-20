@@ -33,4 +33,5 @@ return [
     "id" => "Bahasa Indonesia",
     "ms" => "Bahasa Melayu",
     "uz" => "Oʻzbekcha",
+    "ka" => "ქართული",
 ];

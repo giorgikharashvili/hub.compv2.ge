@@ -15,7 +15,7 @@
                 @php
                     $bgType = $colors['dark']['--background-type'] ?? 'solid';
                     $bgColor = $colors['dark']['--background'] ?? '#1c1c1e';
-                    $grad1 = $colors['dark']['--bg-grad1'] ?? ($colors['dark']['--accent'] ?? '#A5FF75');
+                    $grad1 = $colors['dark']['--bg-grad1'] ?? ($colors['dark']['--accent'] ?? '#9667FD');
                     $grad2 = $colors['dark']['--bg-grad2'] ?? ($colors['dark']['--primary'] ?? '#f2f2f7');
                     $grad3 = $colors['dark']['--bg-grad3'] ?? $bgColor;
                 @endphp
@@ -81,7 +81,7 @@
                 @php
                     $bgType = $colors['light']['--background-type'] ?? 'solid';
                     $bgColor = $colors['light']['--background'] ?? '#ffffff';
-                    $grad1 = $colors['light']['--bg-grad1'] ?? ($colors['light']['--accent'] ?? '#34c759');
+                    $grad1 = $colors['light']['--bg-grad1'] ?? ($colors['light']['--accent'] ?? '#9667FD');
                     $grad2 = $colors['light']['--bg-grad2'] ?? ($colors['light']['--primary'] ?? '#1d1d1f');
                     $grad3 = $colors['light']['--bg-grad3'] ?? $bgColor;
                 @endphp
